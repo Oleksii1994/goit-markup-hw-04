@@ -6,16 +6,6 @@
 
 /* Common styles */
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 :root {
   --body-bgr-color: #ffffff;
   --primary-text-color: #212121;
@@ -28,6 +18,7 @@ html {
   --portfolio-button-bgr: #f5f4fa;
   --hover-focus-btn: #188ce8;
   --team-bgr-color: #f5f4fa;
+  --social-icons-fill: #afb1b8;
 }
 
 /* Utilits */
@@ -74,6 +65,7 @@ img {
 
 .list {
   list-style: none;
+  display: block;
 }
 
 .link {
@@ -133,6 +125,10 @@ img {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.contacts-item {
+  margin-left: auto;
 }
 
 .contacts-nav {
@@ -250,11 +246,12 @@ img {
 .features {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   padding: 0;
   margin: 0;
 }
 
-.features > li {
+.features-item {
   width: 270px;
 }
 
@@ -291,10 +288,11 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .team-container {
-  padding: 30px;
+  padding: 30px 32px;
 }
 
 .team-title {
@@ -308,7 +306,7 @@ img {
 .description-bgr {
   background-color: var(--body-bgr-color);
   width: 270px;
-  height: 368px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -322,7 +320,7 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 28px;
 }
 
 /* footer */
@@ -447,6 +445,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .works-list > li {
@@ -490,4 +489,58 @@ img {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
+}
+
+.work-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-link:hover,
+.work-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* Icons header */
+
+.icon-envelope {
+  margin-right: 10px;
+  align-self: center;
+  fill: currentColor;
+}
+
+.icon-smartphone {
+  margin-right: 10px;
+  align-self: center;
+  fill: currentColor;
+}
+
+/* Icons Feature */
+
+.icon-feature {
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+
+/* Icons Team */
+
+.list-socials {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.team-social-links {
+  fill: var(--social-icons-fill);
+  background-position: center;
+}
+
+.team-social-links:hover,
+.team-social-links:focus {
+  fill: var(--body-bgr-color);
+  background-color: var(--accent-color);
 }
