@@ -28,7 +28,6 @@ body {
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
   margin: 0;
-  width: 1600px;
 }
 
 img {
@@ -151,24 +150,19 @@ img {
 
 /* Hero */
 
-.overlay-hero {
-  height: 600px;
+.hero {
+  text-align: center;
   max-width: 1600px;
-
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../img/bgr.jpg);
   background-color: var(--background-color);
-}
-
-.hero {
-  text-align: center;
-  width: 1600px;
-  height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  background-position: center;
 }
 
 .hero-title {
@@ -329,6 +323,7 @@ img {
 
 .position-footer {
   display: flex;
+  align-items: baseline;
   gap: 70px;
 }
 
@@ -464,7 +459,7 @@ img {
 .works-element {
   width: 370px;
   box-sizing: border-box;
-  background: #ffffff;
+  background: var(--body-bgr-color);
 }
 
 .works-element:nth-child(n + 7) {
@@ -533,9 +528,13 @@ img {
 /* Icons Feature */
 
 .icon-feature {
-  padding: 25px 100px;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
-  background-color: #f5f4fa;
+  background-color: var(--team-bgr-color);
   border-radius: 4px;
 }
 
@@ -600,7 +599,6 @@ img {
   color: var(--hero-text-color);
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 12px;
 }
 
 .icons-ftr {
